@@ -75,7 +75,7 @@ public class RedisConfig {
      * @param redisConnectionFactory
      * @return
      */
-    @Bean
+    @Bean("getStringRedisTemplate")
     @ConditionalOnMissingBean(StringRedisTemplate.class)
     public StringRedisTemplate stringRedisTemplate(RedisConnectionFactory redisConnectionFactory) {
         StringRedisTemplate template = new StringRedisTemplate();
